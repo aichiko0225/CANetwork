@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'CANetwork_Example' do
+  pod 'CANetwork', :path => '../'
+
+  target 'CANetwork_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
