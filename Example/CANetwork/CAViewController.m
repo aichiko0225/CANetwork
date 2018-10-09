@@ -2,7 +2,7 @@
 //  CAViewController.m
 //  CANetwork
 //
-//  Created by aichiko66@163.com on 10/09/2018.
+//  Created by ash on 10/09/2018.
 //  Copyright (c) 2018 aichiko66@163.com. All rights reserved.
 //
 
@@ -22,7 +22,7 @@
     [CCNetworkConfig sharedConfig].debugLogEnabled = YES;
     
     CCCacheRequest *request = [[CCCacheRequest alloc] init];
-    request.requestUrl = @"http://www.baidu.com/";
+    request.requestUrl = @"http://115.231.9.195:8099/api/GetVersionNo?os=ios";
     
     //    [[CCNetworkAgent sharedAgent] addRequest:request];
     [request startWithCompletionBlockWithSuccess:^(__kindof CCBaseRequest * _Nonnull request) {

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0EFF5AC06A944F1C506AC3AE /* Pods_CANetwork_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1669176DA9E2CCDFD33A7596 /* Pods_CANetwork_Example.framework */; };
 		5E87B6EE216C480900F32955 /* APIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E87B6ED216C480900F32955 /* APIViewController.swift */; };
+		5E87B6F0216C497100F32955 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E87B6EF216C497100F32955 /* Request.swift */; };
+		5E87B6F3216C49A700F32955 /* MBProgressHUD+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E87B6F2216C49A700F32955 /* MBProgressHUD+Addition.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -44,6 +46,9 @@
 		5BDE1EDB34235F5E797E7A3D /* Pods-CANetwork_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CANetwork_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CANetwork_Example/Pods-CANetwork_Example.release.xcconfig"; sourceTree = "<group>"; };
 		5E87B6EC216C480800F32955 /* CANetwork-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CANetwork-Bridging-Header.h"; sourceTree = "<group>"; };
 		5E87B6ED216C480900F32955 /* APIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIViewController.swift; sourceTree = "<group>"; };
+		5E87B6EF216C497100F32955 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		5E87B6F1216C49A700F32955 /* MBProgressHUD+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Addition.h"; sourceTree = "<group>"; };
+		5E87B6F2216C49A700F32955 /* MBProgressHUD+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Addition.m"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* CANetwork_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CANetwork_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -140,7 +145,10 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* CAViewController.h */,
 				6003F5A6195388D20070C39A /* CAViewController.m */,
+				5E87B6F1216C49A700F32955 /* MBProgressHUD+Addition.h */,
+				5E87B6F2216C49A700F32955 /* MBProgressHUD+Addition.m */,
 				5E87B6ED216C480900F32955 /* APIViewController.swift */,
+				5E87B6EF216C497100F32955 /* Request.swift */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -377,8 +385,10 @@
 			files = (
 				6003F59E195388D20070C39A /* CAAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* CAViewController.m in Sources */,
+				5E87B6F0216C497100F32955 /* Request.swift in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				5E87B6EE216C480900F32955 /* APIViewController.swift in Sources */,
+				5E87B6F3216C49A700F32955 /* MBProgressHUD+Addition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
