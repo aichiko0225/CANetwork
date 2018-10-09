@@ -7,6 +7,7 @@
 //
 
 #import "CAViewController.h"
+#import <CANetwork/CANetwork.h>
 
 @interface CAViewController ()
 
@@ -18,6 +19,17 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [CCNetworkConfig sharedConfig].debugLogEnabled = YES;
+    
+    CCCacheRequest *request = [[CCCacheRequest alloc] init];
+    request.requestUrl = @"http://www.baidu.com/";
+    
+    //    [[CCNetworkAgent sharedAgent] addRequest:request];
+    [request startWithCompletionBlockWithSuccess:^(__kindof CCBaseRequest * _Nonnull request) {
+        NSLog(@"%@", request);
+    } failure:^(__kindof CCBaseRequest * _Nonnull request) {
+        NSLog(@"%@", request);
+    }];
 }
 
 - (void)didReceiveMemoryWarning

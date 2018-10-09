@@ -1,11 +1,20 @@
 use_frameworks!
 
 target 'CANetwork_Example' do
+  use_frameworks!
+  inhibit_all_warnings!
   pod 'CANetwork', :path => '../'
-
+  
+  pod 'AFNetworking', '~> 3.0'
+  # pod 'YYCache'
+  pod 'MBProgressHUD', '~> 1.1.0'
+  pod 'SwiftyJSON', '~> 4.0'
+  
+  pod 'Alamofire', '~> 4.7'
+  pod 'RxSwift',    '~> 4.0'
+  pod 'RxCocoa',    '~> 4.0'
+  
   target 'CANetwork_Tests' do
     inherit! :search_paths
-
-    
   end
 end
