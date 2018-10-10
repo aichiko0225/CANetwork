@@ -245,7 +245,8 @@ typedef void(^CCRequestCompletionBlock)(__kindof CCBaseRequest * request);
 @property (nonatomic, copy, readonly) NSString *cdnUrl;
 
 ///  HTTP request method.
-@property (nonatomic, assign) CCRequestMethod requestMethod;
+//- (CCRequestMethod)requestMethod;
+@property (nonatomic) CCRequestMethod requestMethod;
 
 ///  Request serializer type.
 - (CCRequestSerializerType)requestSerializerType;

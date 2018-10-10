@@ -136,7 +136,7 @@ NSString *const CCRequestValidationErrorDomain = @"com.ash.request.validation";
 }
 
 - (CCRequestMethod)requestMethod {
-    return CCRequestMethodGET;
+    return _requestMethod;
 }
 
 - (CCRequestSerializerType)requestSerializerType {

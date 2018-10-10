@@ -55,6 +55,8 @@ open class CCRequest: CCCacheRequest {
     
     let headers: [String: String]?
     
+    let method: CCRequestMethod
+    
     open override func requestHeaderFieldValueDictionary() -> [String : String]? {
         return self.headers
     }
@@ -66,6 +68,7 @@ open class CCRequest: CCCacheRequest {
               cacheOption: CCRequestCacheOptions = .default,
               headers: [String: String]? = nil) {
         self.headers = headers
+        self.method = method
         super.init()
         if let baseUrl = baseUrl, baseUrl.count > 0 {
             self.baseUrl = baseUrl
@@ -94,6 +97,7 @@ open class CCRequest: CCCacheRequest {
          cacheOption: CCRequestCacheOptions = .default,
          headers: [String: String]? = nil) {
         self.headers = headers
+        self.method = method
         super.init()
         if let baseUrl = baseUrl, baseUrl.count > 0 {
             self.baseUrl = baseUrl

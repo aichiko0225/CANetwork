@@ -22,8 +22,8 @@ NS_ENUM(NSInteger) {
 };
     
 
-NS_ENUM(NSInteger, CCRequestCacheOptions) {
-    CCRequestCacheOptionsDefault,
+typedef NS_ENUM(NSUInteger, CCRequestCacheOptions) {
+    CCRequestCacheOptionsDefault = 0,
     CCRequestCacheOptionsOnlySave,
     CCRequestCacheOptionsLoadCache
 };
