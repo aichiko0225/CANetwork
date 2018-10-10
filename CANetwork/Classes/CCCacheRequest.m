@@ -388,6 +388,9 @@ static dispatch_queue_t ccrequest_cache_writing_queue() {
 - (NSString *)cacheBasePath {
     NSString *pathOfLibrary = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString *path = [pathOfLibrary stringByAppendingString:@"/LazyRequestCache"];
+    CCLog(@"=============");
+    [self createDirectoryIfNeeded:path];
+    CCLog(@"*************");
     return path;
 }
 

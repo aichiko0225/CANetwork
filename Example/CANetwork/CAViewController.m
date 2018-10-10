@@ -8,6 +8,7 @@
 
 #import "CAViewController.h"
 #import <CANetwork/CANetwork.h>
+#import <CANetwork/CANetwork-Swift.h>
 
 @interface CAViewController ()
 
@@ -25,11 +26,13 @@
     request.requestUrl = @"http://115.231.9.195:8099/api/GetVersionNo?os=ios";
     
     //    [[CCNetworkAgent sharedAgent] addRequest:request];
-    [request startWithCompletionBlockWithSuccess:^(__kindof CCBaseRequest * _Nonnull request) {
-        NSLog(@"%@", request);
-    } failure:^(__kindof CCBaseRequest * _Nonnull request) {
-        NSLog(@"%@", request);
-    }];
+//    [request startWithCompletionBlockWithSuccess:^(__kindof CCBaseRequest * _Nonnull request) {
+//        NSLog(@"%@", request);
+//    } failure:^(__kindof CCBaseRequest * _Nonnull request) {
+//        NSLog(@"%@", request);
+//    }];
+    
+//    CCRequest *request1 = [[CCRequest alloc] initWithBaseUrl:nil url:@"" method:CCRequestMethodGET parameters:nil cacheOption:CCRequestCacheOptionsDefault headers:nil];
 }
 
 - (void)didReceiveMemoryWarning

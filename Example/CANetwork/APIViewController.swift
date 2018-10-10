@@ -25,23 +25,23 @@ class APIViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        CCNetworkConfig.shared().debugLogEnabled = true
         // Do any additional setup after loading the view.
         
-        let request = CCRequest("http://115.231.9.195:8099/api/GetVersionNo?os=ios")
+//        let request = CCRequest("http://115.231.9.195:8099/api/GetVersionNo?os=ios")
         
-        request.responseJSON { (response) in
-            switch response.result {
-            case .success(let s):
-                print(response, s ?? "no json data")
-                break
-            case .failure(let error):
-                print(response, error)
-                break
-            }
-        }
+//        request.responseJSON { (response) in
+//            switch response.result {
+//            case .success(let s):
+//                print(response, s ?? "no json data")
+//                break
+//            case .failure(let error):
+//                print(response, error)
+//                break
+//            }
+//        }
         
-        URLSessionClient().requestSend(ModelRequest<VersionModel>.init(path: "http://115.231.9.195:8099/api/GetVersionNo?os=ios")) { (request, model, error) in
+        URLSessionClient().requestSend(ModelRequest<VersionModel>.init("http://115.231.9.195:8099/api/GetVersionNo?os=ios", cacheOption: .loadCache)) { (request, model, error) in
             
         }
     }

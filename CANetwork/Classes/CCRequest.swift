@@ -53,8 +53,38 @@ public typealias Parameters = [String: Any]
 
 open class CCRequest: CCCacheRequest {
     
+    let headers: [String: String]?
+    
     open override func requestHeaderFieldValueDictionary() -> [String : String]? {
-        return nil
+        return self.headers
+    }
+    
+    @objc public init(baseUrl: String? = nil,
+              url: String,
+              method: CCRequestMethod = .GET,
+              parameters: Parameters? = nil,
+              cacheOption: CCRequestCacheOptions = .default,
+              headers: [String: String]? = nil) {
+        self.headers = headers
+        super.init()
+        if let baseUrl = baseUrl, baseUrl.count > 0 {
+            self.baseUrl = baseUrl
+        }
+        let url = try? url.asURL()
+        self.requestUrl = url ?? ""
+        self.parameters = parameters ?? [:]
+        self.requestMethod = method
+        if cacheOption == .loadCache {
+            self.ignoreCache = false
+            self.cacheTimeInterval = TimeInterval(Int.max)
+        }else {
+            self.ignoreCache = true
+            if cacheOption == .default {
+                self.cacheTimeInterval = -1
+            }else {
+                self.cacheTimeInterval = TimeInterval(Int.max)
+            }
+        }
     }
     
     public init(_ baseUrl: String? = nil,
@@ -63,15 +93,32 @@ open class CCRequest: CCCacheRequest {
          parameters: Parameters? = nil,
          cacheOption: CCRequestCacheOptions = .default,
          headers: [String: String]? = nil) {
+        self.headers = headers
         super.init()
-        self.baseUrl = baseUrl ?? ""
+        if let baseUrl = baseUrl, baseUrl.count > 0 {
+            self.baseUrl = baseUrl
+        }
         let url = try? url.asURL()
         self.requestUrl = url ?? ""
+        self.parameters = parameters ?? [:]
+        self.requestMethod = method
+        if cacheOption == .loadCache {
+            self.ignoreCache = false
+            self.cacheTimeInterval = TimeInterval(Int.max)
+        }else {
+            self.ignoreCache = true
+            if cacheOption == .default {
+                self.cacheTimeInterval = -1
+            }else {
+                self.cacheTimeInterval = TimeInterval(Int.max)
+            }
+        }
+        
+        print(self)
     }
     
     public convenience init(_ url: URLConvertible) {
         self.init(nil, url)
-        
     }
 }
 

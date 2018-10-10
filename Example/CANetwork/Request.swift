@@ -121,7 +121,7 @@ struct URLSessionClient: Client {
         if r.showLoading {
             hud = MBProgressHUD.promptLoading(nil, view: nil)
         }
-        
+        request.cacheTimeInterval = TimeInterval(NSIntegerMax)
         request.responseJSON { (response) in
             DispatchQueue.main.async {
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
@@ -256,7 +256,15 @@ struct ModelRequest<T: CCModelProtocol>: Request {
     typealias Response = T
     var method: CCRequestMethod = .GET
     
-    init(path: URLConvertible, method: CCRequestMethod = .GET, parameters: [String: Any] = [:], showLoading: Bool = false) {
+    init(_ path: URLConvertible, method: CCRequestMethod = .GET, parameters: [String: Any] = [:], cacheOption: CCRequestCacheOptions = .default) {
+        self.path = path
+        self.method = method
+        self.parameters = parameters
+        self.showLoading = false
+        self.cacheOption = cacheOption
+    }
+    
+    init(_ path: URLConvertible, method: CCRequestMethod = .GET, parameters: [String: Any] = [:], showLoading: Bool = false) {
         self.path = path
         self.method = method
         self.parameters = parameters
