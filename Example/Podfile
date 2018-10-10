@@ -4,7 +4,7 @@ target 'CANetwork_Example' do
   use_frameworks!
   inhibit_all_warnings!
   pod 'CANetwork', :path => '../'
-  
+
   pod 'AFNetworking', '~> 3.0'
   # pod 'YYCache'
   pod 'MBProgressHUD', '~> 1.1.0'

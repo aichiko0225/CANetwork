@@ -113,8 +113,6 @@ open class CCRequest: CCCacheRequest {
                 self.cacheTimeInterval = TimeInterval(Int.max)
             }
         }
-        
-        print(self)
     }
     
     public convenience init(_ url: URLConvertible) {

@@ -108,15 +108,19 @@ NSString *const CCRequestValidationErrorDomain = @"com.ash.request.validation";
 #pragma mark - Subclass Override
 
 - (void)requestCompletePreprocessor {
+    CCLog(@"%@ requestCompletePreprocessor", NSStringFromClass([self class]));
 }
 
 - (void)requestCompleteFilter {
+    CCLog(@"%@ requestCompleteFilter", NSStringFromClass([self class]));
 }
 
 - (void)requestFailedPreprocessor {
+    CCLog(@"%@ requestFailedPreprocessor", NSStringFromClass([self class]));
 }
 
 - (void)requestFailedFilter {
+    CCLog(@"%@ requestFailedFilter", NSStringFromClass([self class]));
 }
 
 - (NSString *)requestUrl {

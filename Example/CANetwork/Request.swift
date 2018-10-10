@@ -121,7 +121,6 @@ struct URLSessionClient: Client {
         if r.showLoading {
             hud = MBProgressHUD.promptLoading(nil, view: nil)
         }
-        request.cacheTimeInterval = TimeInterval(NSIntegerMax)
         request.responseJSON { (response) in
             DispatchQueue.main.async {
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false

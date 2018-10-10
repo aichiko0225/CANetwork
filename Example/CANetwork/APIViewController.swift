@@ -25,7 +25,7 @@ class APIViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        CCNetworkConfig.shared().debugLogEnabled = true
+//        CCNetworkConfig.shared().debugLogEnabled = true
         // Do any additional setup after loading the view.
         
 //        let request = CCRequest("http://115.231.9.195:8099/api/GetVersionNo?os=ios")
