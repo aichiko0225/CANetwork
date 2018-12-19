@@ -41,7 +41,7 @@ class APIViewController: UIViewController {
 //            }
 //        }
         
-        URLSessionClient().requestSend(ModelRequest<VersionModel>.init("http://115.231.9.195:8099/api/GetVersionNo?os=ios", cacheOption: .loadCache)) { (request, model, error) in
+        URLSessionClient().requestSend(ModelRequest<VersionModel>.init("http://116.62.30.205:7500/dev1/0/000/020/0000020487.fid", cacheOption: .loadCache)) { (request, model, error) in
             
         }
     }
