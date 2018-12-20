@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'CANetwork'
   s.swift_version    = '4.2'
-  s.version          = '0.1.4'
+  s.version          = '0.1.5'
   s.summary          = 'CCNetwork is a high level request util based on AFNetworking.'
 
 # This description is used to generate tags and improve search results.
@@ -40,6 +40,6 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.frameworks = 'Foundation'
+  s.framework = "CFNetwork"
   s.dependency 'AFNetworking', '~> 3.0'
 end
