@@ -41,20 +41,9 @@ class APIViewController: UIViewController {
 //            }
 //        }
         
-        URLSessionClient().requestSend(ModelRequest<VersionModel>.init("http://116.62.30.205:7500/dev1/0/000/020/0000020487.fid", cacheOption: .loadCache)) { (request, model, error) in
+        URLSessionClient().requestSend(ModelRequest<VersionModel>.init("https://news-at.zhihu.com/api/4/news/latest", cacheOption: .loadCache)) { (request, model, error) in
             
         }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

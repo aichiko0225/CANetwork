@@ -51,7 +51,7 @@
         NSLog(@"%@", image);
         
         _imageView = [[UIImageView alloc] initWithImage:image];
-        [self.view addSubview:_imageView];
+//        [self.view addSubview:_imageView];
         _imageView.center = CGPointMake(200, 300);
         
     }];

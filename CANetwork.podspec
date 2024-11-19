@@ -32,8 +32,19 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'CANetwork/Classes/*.{h,m,swift}'
+  s.default_subspecs = 'Objc'
   
+  # objc 的部分代码
+  s.subspec 'Objc' do |ss|
+    ss.source_files = 'CANetwork/Classes/*.{h,m}'
+  end
+  
+  s.subspec 'Swift' do |ss|
+    ss.source_files = 'CANetwork/Classes/*.{swift}'
+    
+    ss.dependency 'CANetwork/Objc'
+  end
+
   # s.resource_bundles = {
   #   'CANetwork' => ['CANetwork/Assets/*.png']
   # }
